@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      ::-webkit-scrollbar {
+      width: 8px;
+    }
+    :-webkit-scrollbar-track {
+      box-shadow: inset 0 0 2px  #7660FD; 
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #7660FD; 
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #644BFE; 
+    }
+    </style>
+    <title>落點分析結果</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="./css/check.css" rel="stylesheet" >
+    <link rel="stylesheet" href="./css/result.css">
+    <link rel="icon" type="image/x-icon" href="./img/1234.png">
+  </head>
+  <body> 
+ <!--上面索引導覽列--> 
+ <div class="top">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <div class="topleft">
+          <div class="number">
+            <span class="tr1"></span>  
+            <p>111</p>
+            <span class="tr2"></span>
+        </div>
+        <div class="back">
+            <a href="./first.html">交叉查榜</a>
+        </div>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+           <!--官網考古題--> 
+          <li class="nav-item-t">
+            <a class="nav-link-t"  href="#">官網考古題</a>
+            <div class="question">
+              <ul>
+                  <li><a href="">四技甄選委員</a></li>
+                  <li><a href="">四技分發委員</a></li>
+                  <li><a href="">學測考古題</a></li>
+                  <li><a href="">指考考古題</a></li>
+                  <li><a href="">統測考古題</a></li>
+                  <li><a href="">大學考試中心</a></li>
+                  <li><a href="">大學甄選委員</a></li>
+                  <li><a href="">科大申請委員</a></li>
+                  <li><a href="">大學分發委員</a></li>
+                  <li><a href="">四技統測中心</a></li>
+              </ul>
+          </div>
+          </li>
+           <!--備審資料指引--> 
+          <li class="nav-item-t">
+            <a class="nav-link-t" href="#">備審資料指引</a>
+            <div class="find">
+              <ul >
+                  <li><a href="">大學學習歷程-參採查詢</a></li>
+                  <li><a href="">大學申請備審資料準備指引</a></li>
+                  <li><a href="">技專院校備審資料準備指引</a></li>
+              </ul>
+          </div>
+          </li>
+          <!--canvas幫助我<--> 
+          <li class="nav-item-t">
+            <a class="nav-link-t" href="#">canvas幫助我</a>
+            <div class="canvas">
+              <ul >
+                  <li><a href="">教學影片（10）分鐘</a></li>
+                  <li><a href="">Android版下載</a></li>
+                  <li><a href="">ios版下載</a></li>
+              </ul>
+             </div>
+          </li>
+          <!--學習歷程製作<--> 
+          <li class="nav-item-t">
+            <a class="nav-link-t" href="">學習歷程製作</a>
+            <div class="make">
+              <ul >
+                  <li><a href="https://www.canva.com/zh_tw/education/students/">前往canvs網頁版</a></li>
+             </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!--上面圖案區-->
+<div class="container tt">
+  <div class="row">
+ <div class="col-md-7">
+  <div class="left-world">
+    <h1>你111年的學測分數</h1>
+    <div class="left-world-score">
+      <p>國文12</p>
+      <p>英文12</p>
+      <p>數學A12</p>
+      <p>社會12</p>
+      <p>自然12</p>
+    </div>
+     <div class="left-world-score-110-109">
+        <p>經換算相當於110年:國文13 /英文11/數學A12/社會11/自然11</p>
+        <p>經換算相當於119年:國文12/英文12/數學A13/社會11/自然13</p>
+     </div>
+  </div>
+</div>
+<div class="col-md-5">
+  <div class="left-img">
+    <img src="./img/firstrighttwo.png" width="425px" height="450px">
+  </div>
+</div>
+</div>
+</div>
+<!--頁籤的部分-->
+<div class="all">
+<div class="result">
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item-r" role="presentation">
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">有機會通過</button>
+  </li>
+  <li class="nav-item-r" role="presentation">
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">不確定會通過</button>
+  </li>
+  <li class="nav-item-r" role="presentation">
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">未達標</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+    <div class="one-result">
+      <p class="pirple-number">011532</p>
+<div class="school">
+  <p class="purple">國立清華大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">藝術與設計學系創作組</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 241.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">011542</p>
+<div class="school">
+  <p class="purple">國立清華大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">藝術與設計學系設計組</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 241.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">022212</p>
+<div class="school">
+  <p class="purple">國立高雄師範大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">視覺設計學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 201.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">036332</p>
+<div class="school">
+  <p class="purple">國立屏東大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">視覺藝術學系美術組</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 201.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">038242</p>
+<div class="school">
+  <p class="purple">國立台東大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">美術產業學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 241.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">056182</p>
+<div class="school">
+  <p class="purple">國立臺灣藝術大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">亞太建築空間與文物保存學士學位學程</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 241.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">063032</p>
+<div class="school">
+  <p class="purple">國立臺南藝術大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">材質創作與設計系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 241.png" width="146px" height="20px">
+</div>
+    </div>
+<div class="one-result">
+      <p class="pirple-number">101322</p>
+<div class="school">
+  <p class="purple">國立高雄大學</p>
+  <p>註冊率 92.86</p>
+</div>
+<div class="department">
+  <P class="purple-s">建築學系（願景組）</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 201.png" width="146px" height="20px">
+</div>
+    </div>
+<div class="one-result">
+      <p class="pirple-number">153152</p>
+<div class="school">
+  <p class="purple">國立金門大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">建築學系（願景組）</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 207.png" width="146px" height="20px">
+</div>
+    </div>
+<div class="one-result-last">
+      <p class="pirple-number">153302</p>
+<div class="school">
+  <p class="purple">國立金門大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">都市計畫與景觀學系（願景組）</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 207.png" width="146px" height="20px">
+</div>
+    </div>
+
+
+
+
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <div class="one-result">
+      <p class="pirple-number">002472</p>
+<div class="school">
+  <p class="purple">國立臺灣師範大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">表演藝術學士學位學程</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 242.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">002482</p>
+<div class="school">
+  <p class="purple">國立臺灣師範大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">設計學系視覺設計組</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 242.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">002502</p>
+<div class="school">
+  <p class="purple">國立臺灣師範大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">美術學系繪畫組</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 201.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">022142</p>
+<div class="school">
+  <p class="purple">國立高雄師範大學</p>
+  <p>註冊率94.44</p>
+</div>
+<div class="department">
+  <P class="purple-s">工業設計學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 201.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">032262</p>
+<div class="school">
+  <p class="purple">國立臺北教育大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">數位科技設計學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 242.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">032282</p>
+<div class="school">
+  <p class="purple">國立臺北教育大學</p>
+  <p>註冊率100</p>
+</div>
+<div class="department">
+  <P class="purple-s">藝術與造形設計學系設計組</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 242.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result-last">
+      <p class="pirple-number">056212</p>
+<div class="school">
+  <p class="purple">國立臺灣藝術大學</p>
+  <p>註冊率96.55</p>
+</div>
+<div class="department">
+  <P class="purple-s">多媒體動畫藝術學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 241.png" width="146px" height="20px">
+</div>
+    </div>
+
+    </div>
+  
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+       <div class="one-result">
+      <p class="pirple-number">001082</p>
+<div class="school">
+  <p class="purple">國立臺灣大學</p>
+</div>
+<div class="department">
+  <P class="purple-s">戲劇學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 243.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">002402</p>
+<div class="school">
+  <p class="purple">國立臺灣師範大學</p>
+</div>
+<div class="department">
+  <P class="purple-s">設計學系產品設計組</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 243.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">004482</p>
+<div class="school">
+  <p class="purple">國立成功大學</p>
+</div>
+<div class="department">
+  <P class="purple-s">建築學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 243.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">004492</p>
+<div class="school">
+  <p class="purple">國立成功大學</p>
+</div>
+<div class="department">
+  <P class="purple-s">都市計劃學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 243.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result">
+      <p class="pirple-number">004502</p>
+<div class="school">
+  <p class="purple">國立成功大學</p>
+</div>
+<div class="department">
+  <P class="purple-s">工業設計學系</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 243.png" width="146px" height="20px">
+</div>
+    </div>
+    <div class="one-result-last">
+      <p class="pirple-number">006092</p>
+<div class="school">
+  <p class="purple">國立政治大學</p>
+</div>
+<div class="department">
+  <P class="purple-s">地政學系土地資源規劃組</P>
+  <div class="news">
+    <a href="#">111簡章</a>
+    <a href="#">近三年篩選標準</a>
+    <a href="#">升學就業地圖</a>
+    <a href="#">動態落點</a>
+    <a href="#">校系介紹</a>
+  </div>
+</div>
+<div class="star">
+  <p>過機率異動</p>
+  <img src="./img/Group 243.png" width="146px" height="20px">
+</div>
+    </div>
+   
+    </div></div>
+  </div>
+</div>
+</div>
+</div>
+<!-- 底部廣告區 -->
+<div class="bottom-all">
+  <img src="./img/ad.png" alt="" width="100%">
+  <div class="footer">
+      <div class="containter bottom">
+          <div class="row">
+              <div class="col-md-8">
+                  <div class="bottomleft">
+                      <div class="bottomlefttop">
+                          <img src="./img/ad1.png" alt="" >
+                          <img src="./img/ad2.png" alt="" >
+          
+                      </div>
+                      <div class="bottomleftbottom">
+                          <ul>
+                            <div class="threeac">
+                              <li><img src="./img/ad3.png" alt=""></li>
+                              <li><img src="./img/ad4.png" alt=""></li>
+                              <li><img src="./img/ad5.png" alt=""></li>
+                            </div>
+                              <li class="ac-s"><img src="./img/ad6.png" alt=""></li>
+                              <li class="ac-s"><img src="./img/ad7.png" alt=""></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="bottomright">
+                      <img src="./img/ad6.png" alt="" >
+                      <img src="./img/ad7.png" alt=""  >
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="lastbottom">
+          <p>祝您金榜題名（網站名單若有錯誤，以學校榜單為主）</p>
+          <div class="icon">
+            <img src="./img/fb-icon (1).png" alt="">
+            <img src="./img/line-icon.png" alt="">
+          </div>
+        </div>
+  </div>
+
+
+</div>
+  <!-- JavaScript Bundle with Popper -->
+    <script src="./js/check.js"></script>
+</body>
+</html>

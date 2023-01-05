@@ -1,0 +1,3477 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      ::-webkit-scrollbar {
+      width: 8px;
+    }
+    :-webkit-scrollbar-track {
+      box-shadow: inset 0 0 2px  #7660FD; 
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #7660FD; 
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #644BFE; 
+    }
+    </style>
+    <title>落點分析</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="./css/check.css" rel="stylesheet" >
+    <link rel="stylesheet" href="./css/analyze.css" />
+    <link rel="icon" type="image/x-icon" href="./img/1234.png">
+  </head>
+  <body>
+ <!--上面索引導覽列--> 
+ <div class="top">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <div class="topleft">
+          <div class="number">
+            <span class="tr1"></span>  
+            <p>111</p>
+            <span class="tr2"></span>
+        </div>
+        <div class="back">
+            <a href="./first.html">交叉查榜</a>
+        </div>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+           <!--官網考古題--> 
+          <li class="nav-item-t">
+            <a class="nav-link-t"  href="#">官網考古題</a>
+            <div class="question">
+              <ul>
+                  <li><a href="">四技甄選委員</a></li>
+                  <li><a href="">四技分發委員</a></li>
+                  <li><a href="">學測考古題</a></li>
+                  <li><a href="">指考考古題</a></li>
+                  <li><a href="">統測考古題</a></li>
+                  <li><a href="">大學考試中心</a></li>
+                  <li><a href="">大學甄選委員</a></li>
+                  <li><a href="">科大申請委員</a></li>
+                  <li><a href="">大學分發委員</a></li>
+                  <li><a href="">四技統測中心</a></li>
+              </ul>
+          </div>
+          </li>
+           <!--備審資料指引--> 
+          <li class="nav-item-t">
+            <a class="nav-link-t" href="#">備審資料指引</a>
+            <div class="find">
+              <ul >
+                  <li><a href="">大學學習歷程-參採查詢</a></li>
+                  <li><a href="">大學申請備審資料準備指引</a></li>
+                  <li><a href="">技專院校備審資料準備指引</a></li>
+              </ul>
+          </div>
+          </li>
+          <!--canvas幫助我<--> 
+          <li class="nav-item-t">
+            <a class="nav-link-t" href="#">canvas幫助我</a>
+            <div class="canvas">
+              <ul >
+                  <li><a href="">教學影片（10）分鐘</a></li>
+                  <li><a href="">Android版下載</a></li>
+                  <li><a href="">ios版下載</a></li>
+              </ul>
+             </div>
+          </li>
+          <!--學習歷程製作<--> 
+          <li class="nav-item-t">
+            <a class="nav-link-t" href="">學習歷程製作</a>
+            <div class="make">
+              <ul >
+                  <li><a href="https://www.canva.com/zh_tw/education/students/">前往canvs網頁版</a></li>
+             </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+    <!--落點的頁籤-->
+    <div class="all">
+      <div class="analyze">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              大學申請入學
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-profile-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-profile"
+              type="button"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              大學繁星推薦
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-contact-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-contact"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              科大四技申請
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-four-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-four"
+              type="button"
+              role="tab"
+              aria-controls="pills-four"
+              aria-selected="false"
+            >
+              警大軍校申請
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+          >
+            <p class="GSAT">輸入學測成績</p>
+            <form class="score">
+              國文<input type="text" /> 英文<input type="text" /> 數學A<input
+                type="text"
+              />
+              數學B<input type="text" /> 社會<input type="text" /> 自然<input
+                type="text"
+              />
+            </form>
+            <div class="container-pp">
+              <div class="row">
+                <!--英聽-->
+                <div class="col-md-5">
+                  <div class="en-all">
+                    <p class="en">請選擇英聽成績</p>
+                    <div class="score-en">
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-a" name="en-test" />
+                        <label for="en-a">A</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-b" name="en-test" />
+                        <label for="en-b">B</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-c" name="en-test" />
+                        <label for="en-c">C</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-F" name="en-test" />
+                        <label for="en-F">F</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="apcs-all">
+                    <p class="apcs">輸入APCS檢測成績(未報考者免填)</p>
+                    <div class="score-APCS">
+                      <p>程式設計觀念題</p>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-1" name="en-APCS" />
+                        <label for="en-1">1</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-2" name="en-APCS" />
+                        <label for="en-2">2</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-3" name="en-APCS" />
+                        <label for="en-3">3</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-4" name="en-APCS" />
+                        <label for="en-4">4</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-5" name="en-APCS" />
+                        <label for="en-5">5</label>
+                      </div>
+                      <p>程式設計實作題</p>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-1" name="en-APCS-2" />
+                        <label for="APCS-1">1</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-2" name="en-APCS-2" />
+                        <label for="APCS-2">2</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-3" name="en-APCS-2" />
+                        <label for="APCS-3">3</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-4" name="en-APCS-2" />
+                        <label for="APCS-4">4</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-5" name="en-APCS-2" />
+                        <label for="APCS-5">5</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--選擇學群-->
+            <div class="choose-class">
+              <p class="choose">選擇學群</p>
+              <div class="container cc">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="all-choose">
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-all" name="cc" />
+                        <label for="cc-all">全選</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="right-choose">
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-1" />
+                        <label for="cc-1">資訊</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-2" />
+                        <label for="cc-2">工程</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-3" />
+                        <label for="cc-3">數理化</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-4" />
+                        <label for="cc-4">醫療衛生</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-5" />
+                        <label for="cc-5">生命科學</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-6" />
+                        <label for="cc-6">生物資源</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-7" />
+                        <label for="cc-7">地球與環境</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-8" />
+                        <label for="cc-8">建築與設計</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-9" />
+                        <label for="cc-9">藝術</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-10" />
+                        <label for="cc-10">社會與心理</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-11" />
+                        <label for="cc-11">大眾傳播</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-12" />
+                        <label for="cc-12">文史哲</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-13" />
+                        <label for="cc-13">外語</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-14" />
+                        <label for="cc-14">教育</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-15" />
+                        <label for="cc-15">法政</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-16" />
+                        <label for="cc-16">管理</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-17" />
+                        <label for="cc-17">財經</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-18" />
+                        <label for="cc-18">遊憩與運動</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-19" />
+                        <label for="cc-19">其他</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--選地區跟學校-->
+            <div class="area-school">
+              <ul
+                class="nav nav-pills-area mb-3"
+                id="pills-tab-area"
+                role="tablist"
+              >
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area active"
+                    id="pills-yilan-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-yilan"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-yilan"
+                    aria-selected="true"
+                  >
+                    宜花東
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-taipei-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-taipei"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-taipei"
+                    aria-selected="false"
+                  >
+                    北北基
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-taoyuan-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-taoyuan"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-taoyuan"
+                    aria-selected="false"
+                  >
+                    桃竹苗
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-changhua-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-changhua"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-changhua"
+                    aria-selected="false"
+                  >
+                    中彰投
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-chiayi-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-chiayi"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-chiayi"
+                    aria-selected="false"
+                  >
+                    雲嘉南
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-kg-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-kg"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-kg"
+                    aria-selected="false"
+                  >
+                    高屏金門
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-yilan"
+                  role="tabpanel"
+                  aria-labelledby="pills-yilan-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-yilan">
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-all" />
+                            <label for="public-all">公立全選</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-1" />
+                            <label for="public-1">國立宜蘭大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-2" />
+                            <label for="public-2">國立東華大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-3" />
+                            <label for="public-3">國立臺東大學</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-yilan">
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-all" />
+                            <label for="private-all">私立全選</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-1" />
+                            <label for="private-1">佛光大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-2" />
+                            <label for="private-2">慈濟大學</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-taipei"
+                  role="tabpanel"
+                  aria-labelledby="pills-taipei-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taipei">
+                          <div class="public-all-taipei">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-all" />
+                              <label for="taipei-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-1" />
+                              <label for="taipei-public-1">國立臺灣大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-2" />
+                              <label for="taipei-public-2">國立師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-3" />
+                              <label for="taipei-public-3">國立政治大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-4" />
+                              <label for="taipei-public-4"
+                                >國立陽明交通大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-5" />
+                              <label for="taipei-public-5"
+                                >國立臺北藝術大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-6" />
+                              <label for="taipei-public-6"
+                                >國立臺北教育大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-7" />
+                              <label for="taipei-public-7"
+                                >國立臺北市立大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-8" />
+                              <label for="taipei-public-8"
+                                >國立臺灣藝術大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-9" />
+                              <label for="taipei-public-9">國立臺北大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-10" />
+                              <label for="taipei-public-10"
+                                >國立臺灣海洋大學</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-taipei">
+                          <div class="private-all-taipei">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-all" />
+                              <label for="taipei-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-1" />
+                              <label for="taipei-private-1">東吳大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-2" />
+                              <label for="taipei-private-2">淡江大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-3" />
+                              <label for="taipei-private-3">中國文化大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-4" />
+                              <label for="taipei-private-4">大同大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-5" />
+                              <label for="taipei-private-5">輔仁大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-6" />
+                              <label for="taipei-private-6">華梵大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-7" />
+                              <label for="taipei-private-7">銘傳大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-8" />
+                              <label for="taipei-private-8">世新大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-9" />
+                              <label for="taipei-private-9">實踐大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-10" />
+                              <label for="taipei-private-10">真理大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-11" />
+                              <label for="taipei-private-11"
+                                >台北醫學大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-12" />
+                              <label for="taipei-private-12">馬偕醫學院</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-13" />
+                              <label for="taipei-private-13"
+                                >台北基督學院</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-taoyuan"
+                  role="tabpanel"
+                  aria-labelledby="pills-taoyuan-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-all" />
+                              <label for="taoyuan-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-1" />
+                              <label for="taoyuan-public-1">國立清華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-2" />
+                              <label for="taoyuan-public-2">國立陽明交通大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-3" />
+                              <label for="taoyuan-public-3">國立中央大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-4" />
+                              <label for="taoyuan-public-4"
+                                >國立體育大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-5" />
+                              <label for="taoyuan-public-5"
+                                >國立聯合大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-taoyuan">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-all" />
+                              <label for="taoyuan-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-1" />
+                              <label for="taoyuan-private-1">中原大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-2" />
+                              <label for="taoyuan-private-2">長庚大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-3" />
+                              <label for="taoyuan-private-3">中華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-4" />
+                              <label for="taoyuan-private-4">玄奘大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-5" />
+                              <label for="taoyuan-private-5">開南大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-6" />
+                              <label for="taoyuan-private-6">銘傳大學</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-changhua"
+                  role="tabpanel"
+                  aria-labelledby="pills-changhua-tab"
+                  tabindex="0"
+                >
+                 <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-all" />
+                              <label for="changhua-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-1" />
+                              <label for="changhua-public-1">國立中興大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-2" />
+                              <label for="changhua-public-2">國立彰化師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-3" />
+                              <label for="changhua-public-3">國立台中教育大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-4" />
+                              <label for="changhua-public-4"
+                                >國立暨南國際大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-5" />
+                              <label for="changhua-public-5"
+                                >國立台灣體育動大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-changhua">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-all" />
+                              <label for="changhua-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-changha">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-1" />
+                              <label for="changhua-private-1">東海大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-2" />
+                              <label for="changhua-private-2">逢甲大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-3" />
+                              <label for="changhua-private-3">靜宜大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-4" />
+                              <label for="changhua-private-4">中國醫藥大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-5" />
+                              <label for="changhua-private-5">大葉大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-6" />
+                              <label for="changhua-private-6">明道大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-7" />
+                              <label for="changhua-private-6">亞洲大學</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-chiayi"
+                  role="tabpanel"
+                  aria-labelledby="pills-chiayi-tab"
+                  tabindex="0"
+                >
+                <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-all" />
+                              <label for="changhua-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-1" />
+                              <label for="changhua-public-1">國立成功大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-2" />
+                              <label for="changhua-public-2">國立中正大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-3" />
+                              <label for="changhua-public-3">國立台南大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-4" />
+                              <label for="changhua-public-4"
+                                >國立嘉義大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-5" />
+                              <label for="changhua-public-5"
+                                >國立台南藝術大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-changhua">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-all" />
+                              <label for="changhua-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-chiayi">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-1" />
+                              <label for="changhua-private-1">長榮大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-2" />
+                              <label for="changhua-private-2">南華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-3" />
+                              <label for="changhua-private-3">台灣首府大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-4" />
+                              <label for="changhua-private-4">康寧大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-5" />
+                              <label for="changhua-private-5">中信金融管理學院</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-kg"
+                  role="tabpanel"
+                  aria-labelledby="pills-kg-tab"
+                  tabindex="0"
+                >
+                <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-all" />
+                              <label for="kg-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-1" />
+                              <label for="kg-public-1">國立中山大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-2" />
+                              <label for="kg-public-2">國立高雄師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-3" />
+                              <label for="kg-public-3">國立屏東大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-4" />
+                              <label for="kg-public-4"
+                                >國立高雄大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-5" />
+                              <label for="kg-public-5"
+                                >國立金門大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-kg">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-all" />
+                              <label for="kg-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-kg">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-1" />
+                              <label for="kg-private-1">高雄醫藥大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-2" />
+                              <label for="kg-private-2">義守大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-3" />
+                              <label for="kg-private-3">實踐大學 高雄校區</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--提交跟重設-->
+            <div class="submit-reset">
+              <a class="submit" href="./result.html">提交</a>
+              <a class="reset" href="#">重設</a>
+            </div>
+          </div>
+        </div>
+<div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+                    <p class="GSAT">輸入學測成績</p>
+            <form class="score">
+              國文<input type="text" /> 英文<input type="text" /> 數學A<input
+                type="text"
+              />
+              數學B<input type="text" /> 社會<input type="text" /> 自然<input
+                type="text"
+              />
+            </form>
+            <div class="container-pp">
+              <div class="row">
+                <!--英聽-->
+                <div class="col-md-5">
+                  <div class="en-all">
+                    <p class="en">請選擇英聽成績</p>
+                    <div class="score-en">
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-a" name="en-test" />
+                        <label for="en-a">A</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-b" name="en-test" />
+                        <label for="en-b">B</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-c" name="en-test" />
+                        <label for="en-c">C</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-F" name="en-test" />
+                        <label for="en-F">F</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="apcs-all">
+                    <p class="apcs">輸入APCS檢測成績(未報考者免填)</p>
+                    <div class="score-APCS">
+                      <p>程式設計觀念題</p>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-1" name="en-APCS" />
+                        <label for="en-1">1</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-2" name="en-APCS" />
+                        <label for="en-2">2</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-3" name="en-APCS" />
+                        <label for="en-3">3</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-4" name="en-APCS" />
+                        <label for="en-4">4</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-5" name="en-APCS" />
+                        <label for="en-5">5</label>
+                      </div>
+                      <p>程式設計實作題</p>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-1" name="en-APCS-2" />
+                        <label for="APCS-1">1</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-2" name="en-APCS-2" />
+                        <label for="APCS-2">2</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-3" name="en-APCS-2" />
+                        <label for="APCS-3">3</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-4" name="en-APCS-2" />
+                        <label for="APCS-4">4</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-5" name="en-APCS-2" />
+                        <label for="APCS-5">5</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--選擇學群-->
+            <div class="choose-class">
+              <p class="choose">選擇學群</p>
+              <div class="container cc">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="all-choose">
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-all" name="cc" />
+                        <label for="cc-all">全選</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="right-choose">
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-1" />
+                        <label for="cc-1">資訊</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-2" />
+                        <label for="cc-2">工程</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-3" />
+                        <label for="cc-3">數理化</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-4" />
+                        <label for="cc-4">醫療衛生</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-5" />
+                        <label for="cc-5">生命科學</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-6" />
+                        <label for="cc-6">生物資源</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-7" />
+                        <label for="cc-7">地球與環境</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-8" />
+                        <label for="cc-8">建築與設計</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-9" />
+                        <label for="cc-9">藝術</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-10" />
+                        <label for="cc-10">社會與心理</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-11" />
+                        <label for="cc-11">大眾傳播</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-12" />
+                        <label for="cc-12">文史哲</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-13" />
+                        <label for="cc-13">外語</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-14" />
+                        <label for="cc-14">教育</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-15" />
+                        <label for="cc-15">法政</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-16" />
+                        <label for="cc-16">管理</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-17" />
+                        <label for="cc-17">財經</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-18" />
+                        <label for="cc-18">遊憩與運動</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-19" />
+                        <label for="cc-19">其他</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--選地區跟學校-->
+            <div class="area-school">
+              <ul
+                class="nav nav-pills-area mb-3"
+                id="pills-tab-area"
+                role="tablist"
+              >
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area active"
+                    id="pills-yilan-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-yilan"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-yilan"
+                    aria-selected="true"
+                  >
+                    宜花東
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-taipei-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-taipei"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-taipei"
+                    aria-selected="false"
+                  >
+                    北北基
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-taoyuan-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-taoyuan"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-taoyuan"
+                    aria-selected="false"
+                  >
+                    桃竹苗
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-changhua-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-changhua"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-changhua"
+                    aria-selected="false"
+                  >
+                    中彰投
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-chiayi-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-chiayi"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-chiayi"
+                    aria-selected="false"
+                  >
+                    雲嘉南
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-kg-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-kg"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-kg"
+                    aria-selected="false"
+                  >
+                    高屏金門
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-yilan"
+                  role="tabpanel"
+                  aria-labelledby="pills-yilan-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-yilan">
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-all" />
+                            <label for="public-all">公立全選</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-1" />
+                            <label for="public-1">國立宜蘭大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-2" />
+                            <label for="public-2">國立東華大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-3" />
+                            <label for="public-3">國立臺東大學</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-yilan">
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-all" />
+                            <label for="private-all">私立全選</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-1" />
+                            <label for="private-1">佛光大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-2" />
+                            <label for="private-2">慈濟大學</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-taipei"
+                  role="tabpanel"
+                  aria-labelledby="pills-taipei-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taipei">
+                          <div class="public-all-taipei">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-all" />
+                              <label for="taipei-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-1" />
+                              <label for="taipei-public-1">國立臺灣大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-2" />
+                              <label for="taipei-public-2">國立師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-3" />
+                              <label for="taipei-public-3">國立政治大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-4" />
+                              <label for="taipei-public-4"
+                                >國立陽明交通大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-5" />
+                              <label for="taipei-public-5"
+                                >國立臺北藝術大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-6" />
+                              <label for="taipei-public-6"
+                                >國立臺北教育大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-7" />
+                              <label for="taipei-public-7"
+                                >國立臺北市立大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-8" />
+                              <label for="taipei-public-8"
+                                >國立臺灣藝術大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-9" />
+                              <label for="taipei-public-9">國立臺北大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-10" />
+                              <label for="taipei-public-10"
+                                >國立臺灣海洋大學</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-taipei">
+                          <div class="private-all-taipei">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-all" />
+                              <label for="taipei-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-1" />
+                              <label for="taipei-private-1">東吳大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-2" />
+                              <label for="taipei-private-2">淡江大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-3" />
+                              <label for="taipei-private-3">中國文化大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-4" />
+                              <label for="taipei-private-4">大同大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-5" />
+                              <label for="taipei-private-5">輔仁大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-6" />
+                              <label for="taipei-private-6">華梵大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-7" />
+                              <label for="taipei-private-7">銘傳大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-8" />
+                              <label for="taipei-private-8">世新大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-9" />
+                              <label for="taipei-private-9">實踐大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-10" />
+                              <label for="taipei-private-10">真理大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-11" />
+                              <label for="taipei-private-11"
+                                >台北醫學大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-12" />
+                              <label for="taipei-private-12">馬偕醫學院</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-13" />
+                              <label for="taipei-private-13"
+                                >台北基督學院</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-taoyuan"
+                  role="tabpanel"
+                  aria-labelledby="pills-taoyuan-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-all" />
+                              <label for="taoyuan-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-1" />
+                              <label for="taoyuan-public-1">國立清華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-2" />
+                              <label for="taoyuan-public-2">國立陽明交通大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-3" />
+                              <label for="taoyuan-public-3">國立中央大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-4" />
+                              <label for="taoyuan-public-4"
+                                >國立體育大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-5" />
+                              <label for="taoyuan-public-5"
+                                >國立聯合大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-taoyuan">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-all" />
+                              <label for="taoyuan-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-1" />
+                              <label for="taoyuan-private-1">中原大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-2" />
+                              <label for="taoyuan-private-2">長庚大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-3" />
+                              <label for="taoyuan-private-3">中華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-4" />
+                              <label for="taoyuan-private-4">玄奘大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-5" />
+                              <label for="taoyuan-private-5">開南大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-6" />
+                              <label for="taoyuan-private-6">銘傳大學</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-changhua"
+                  role="tabpanel"
+                  aria-labelledby="pills-changhua-tab"
+                  tabindex="0"
+                >
+                 <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-all" />
+                              <label for="changhua-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-1" />
+                              <label for="changhua-public-1">國立中興大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-2" />
+                              <label for="changhua-public-2">國立彰化師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-3" />
+                              <label for="changhua-public-3">國立台中教育大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-4" />
+                              <label for="changhua-public-4"
+                                >國立暨南國際大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-5" />
+                              <label for="changhua-public-5"
+                                >國立台灣體育動大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-changhua">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-all" />
+                              <label for="changhua-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-changha">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-1" />
+                              <label for="changhua-private-1">東海大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-2" />
+                              <label for="changhua-private-2">逢甲大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-3" />
+                              <label for="changhua-private-3">靜宜大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-4" />
+                              <label for="changhua-private-4">中國醫藥大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-5" />
+                              <label for="changhua-private-5">大葉大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-6" />
+                              <label for="changhua-private-6">明道大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-7" />
+                              <label for="changhua-private-6">亞洲大學</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-chiayi"
+                  role="tabpanel"
+                  aria-labelledby="pills-chiayi-tab"
+                  tabindex="0"
+                >
+                <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-all" />
+                              <label for="changhua-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-1" />
+                              <label for="changhua-public-1">國立成功大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-2" />
+                              <label for="changhua-public-2">國立中正大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-3" />
+                              <label for="changhua-public-3">國立台南大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-4" />
+                              <label for="changhua-public-4"
+                                >國立嘉義大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-5" />
+                              <label for="changhua-public-5"
+                                >國立台南藝術大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-changhua">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-all" />
+                              <label for="changhua-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-chiayi">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-1" />
+                              <label for="changhua-private-1">長榮大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-2" />
+                              <label for="changhua-private-2">南華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-3" />
+                              <label for="changhua-private-3">台灣首府大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-4" />
+                              <label for="changhua-private-4">康寧大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-5" />
+                              <label for="changhua-private-5">中信金融管理學院</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-kg"
+                  role="tabpanel"
+                  aria-labelledby="pills-kg-tab"
+                  tabindex="0"
+                >
+                <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-all" />
+                              <label for="kg-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-1" />
+                              <label for="kg-public-1">國立中山大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-2" />
+                              <label for="kg-public-2">國立高雄師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-3" />
+                              <label for="kg-public-3">國立屏東大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-4" />
+                              <label for="kg-public-4"
+                                >國立高雄大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-5" />
+                              <label for="kg-public-5"
+                                >國立金門大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-kg">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-all" />
+                              <label for="kg-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-kg">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-1" />
+                              <label for="kg-private-1">高雄醫藥大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-2" />
+                              <label for="kg-private-2">義守大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-3" />
+                              <label for="kg-private-3">實踐大學 高雄校區</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--提交跟重設-->
+            <div class="submit-reset">
+              <a class="submit" href="#">提交</a>
+              <a class="reset" href="#">重設</a>
+            </div>
+          </div>
+        </div>
+<div
+          class="tab-pane fade"
+          id="pills-contact"
+          role="tabpanel"
+          aria-labelledby="pills-contact-tab"
+        >
+           <p class="GSAT">輸入學測成績</p>
+            <form class="score">
+              國文<input type="text" /> 英文<input type="text" /> 數學A<input
+                type="text"
+              />
+              數學B<input type="text" /> 社會<input type="text" /> 自然<input
+                type="text"
+              />
+            </form>
+            <div class="container-pp">
+              <div class="row">
+                <!--英聽-->
+                <div class="col-md-5">
+                  <div class="en-all">
+                    <p class="en">請選擇英聽成績</p>
+                    <div class="score-en">
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-a" name="en-test" />
+                        <label for="en-a">A</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-b" name="en-test" />
+                        <label for="en-b">B</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-c" name="en-test" />
+                        <label for="en-c">C</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-F" name="en-test" />
+                        <label for="en-F">F</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="apcs-all">
+                    <p class="apcs">輸入APCS檢測成績(未報考者免填)</p>
+                    <div class="score-APCS">
+                      <p>程式設計觀念題</p>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-1" name="en-APCS" />
+                        <label for="en-1">1</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-2" name="en-APCS" />
+                        <label for="en-2">2</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-3" name="en-APCS" />
+                        <label for="en-3">3</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-4" name="en-APCS" />
+                        <label for="en-4">4</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-5" name="en-APCS" />
+                        <label for="en-5">5</label>
+                      </div>
+                      <p>程式設計實作題</p>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-1" name="en-APCS-2" />
+                        <label for="APCS-1">1</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-2" name="en-APCS-2" />
+                        <label for="APCS-2">2</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-3" name="en-APCS-2" />
+                        <label for="APCS-3">3</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-4" name="en-APCS-2" />
+                        <label for="APCS-4">4</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-5" name="en-APCS-2" />
+                        <label for="APCS-5">5</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--選擇學群-->
+            <div class="choose-class">
+              <p class="choose">選擇學群</p>
+              <div class="container cc">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="all-choose">
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-all" name="cc" />
+                        <label for="cc-all">全選</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="right-choose">
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-1" />
+                        <label for="cc-1">資訊</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-2" />
+                        <label for="cc-2">工程</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-3" />
+                        <label for="cc-3">數理化</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-4" />
+                        <label for="cc-4">醫療衛生</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-5" />
+                        <label for="cc-5">生命科學</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-6" />
+                        <label for="cc-6">生物資源</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-7" />
+                        <label for="cc-7">地球與環境</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-8" />
+                        <label for="cc-8">建築與設計</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-9" />
+                        <label for="cc-9">藝術</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-10" />
+                        <label for="cc-10">社會與心理</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-11" />
+                        <label for="cc-11">大眾傳播</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-12" />
+                        <label for="cc-12">文史哲</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-13" />
+                        <label for="cc-13">外語</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-14" />
+                        <label for="cc-14">教育</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-15" />
+                        <label for="cc-15">法政</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-16" />
+                        <label for="cc-16">管理</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-17" />
+                        <label for="cc-17">財經</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-18" />
+                        <label for="cc-18">遊憩與運動</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-19" />
+                        <label for="cc-19">其他</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--選地區跟學校-->
+            <div class="area-school">
+              <ul
+                class="nav nav-pills-area mb-3"
+                id="pills-tab-area"
+                role="tablist"
+              >
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area active"
+                    id="pills-yilan-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-yilan"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-yilan"
+                    aria-selected="true"
+                  >
+                    宜花東
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-taipei-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-taipei"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-taipei"
+                    aria-selected="false"
+                  >
+                    北北基
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-taoyuan-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-taoyuan"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-taoyuan"
+                    aria-selected="false"
+                  >
+                    桃竹苗
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-changhua-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-changhua"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-changhua"
+                    aria-selected="false"
+                  >
+                    中彰投
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-chiayi-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-chiayi"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-chiayi"
+                    aria-selected="false"
+                  >
+                    雲嘉南
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-kg-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-kg"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-kg"
+                    aria-selected="false"
+                  >
+                    高屏金門
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-yilan"
+                  role="tabpanel"
+                  aria-labelledby="pills-yilan-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-yilan">
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-all" />
+                            <label for="public-all">公立全選</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-1" />
+                            <label for="public-1">國立宜蘭大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-2" />
+                            <label for="public-2">國立東華大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-3" />
+                            <label for="public-3">國立臺東大學</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-yilan">
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-all" />
+                            <label for="private-all">私立全選</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-1" />
+                            <label for="private-1">佛光大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-2" />
+                            <label for="private-2">慈濟大學</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-taipei"
+                  role="tabpanel"
+                  aria-labelledby="pills-taipei-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taipei">
+                          <div class="public-all-taipei">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-all" />
+                              <label for="taipei-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-1" />
+                              <label for="taipei-public-1">國立臺灣大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-2" />
+                              <label for="taipei-public-2">國立師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-3" />
+                              <label for="taipei-public-3">國立政治大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-4" />
+                              <label for="taipei-public-4"
+                                >國立陽明交通大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-5" />
+                              <label for="taipei-public-5"
+                                >國立臺北藝術大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-6" />
+                              <label for="taipei-public-6"
+                                >國立臺北教育大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-7" />
+                              <label for="taipei-public-7"
+                                >國立臺北市立大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-8" />
+                              <label for="taipei-public-8"
+                                >國立臺灣藝術大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-9" />
+                              <label for="taipei-public-9">國立臺北大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-10" />
+                              <label for="taipei-public-10"
+                                >國立臺灣海洋大學</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-taipei">
+                          <div class="private-all-taipei">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-all" />
+                              <label for="taipei-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-1" />
+                              <label for="taipei-private-1">東吳大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-2" />
+                              <label for="taipei-private-2">淡江大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-3" />
+                              <label for="taipei-private-3">中國文化大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-4" />
+                              <label for="taipei-private-4">大同大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-5" />
+                              <label for="taipei-private-5">輔仁大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-6" />
+                              <label for="taipei-private-6">華梵大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-7" />
+                              <label for="taipei-private-7">銘傳大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-8" />
+                              <label for="taipei-private-8">世新大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-9" />
+                              <label for="taipei-private-9">實踐大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-10" />
+                              <label for="taipei-private-10">真理大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-11" />
+                              <label for="taipei-private-11"
+                                >台北醫學大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-12" />
+                              <label for="taipei-private-12">馬偕醫學院</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-13" />
+                              <label for="taipei-private-13"
+                                >台北基督學院</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-taoyuan"
+                  role="tabpanel"
+                  aria-labelledby="pills-taoyuan-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-all" />
+                              <label for="taoyuan-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-1" />
+                              <label for="taoyuan-public-1">國立清華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-2" />
+                              <label for="taoyuan-public-2">國立陽明交通大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-3" />
+                              <label for="taoyuan-public-3">國立中央大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-4" />
+                              <label for="taoyuan-public-4"
+                                >國立體育大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-5" />
+                              <label for="taoyuan-public-5"
+                                >國立聯合大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-taoyuan">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-all" />
+                              <label for="taoyuan-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-1" />
+                              <label for="taoyuan-private-1">中原大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-2" />
+                              <label for="taoyuan-private-2">長庚大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-3" />
+                              <label for="taoyuan-private-3">中華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-4" />
+                              <label for="taoyuan-private-4">玄奘大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-5" />
+                              <label for="taoyuan-private-5">開南大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-6" />
+                              <label for="taoyuan-private-6">銘傳大學</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-changhua"
+                  role="tabpanel"
+                  aria-labelledby="pills-changhua-tab"
+                  tabindex="0"
+                >
+                 <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-all" />
+                              <label for="changhua-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-1" />
+                              <label for="changhua-public-1">國立中興大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-2" />
+                              <label for="changhua-public-2">國立彰化師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-3" />
+                              <label for="changhua-public-3">國立台中教育大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-4" />
+                              <label for="changhua-public-4"
+                                >國立暨南國際大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-5" />
+                              <label for="changhua-public-5"
+                                >國立台灣體育動大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-changhua">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-all" />
+                              <label for="changhua-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-changha">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-1" />
+                              <label for="changhua-private-1">東海大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-2" />
+                              <label for="changhua-private-2">逢甲大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-3" />
+                              <label for="changhua-private-3">靜宜大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-4" />
+                              <label for="changhua-private-4">中國醫藥大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-5" />
+                              <label for="changhua-private-5">大葉大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-6" />
+                              <label for="changhua-private-6">明道大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-7" />
+                              <label for="changhua-private-6">亞洲大學</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-chiayi"
+                  role="tabpanel"
+                  aria-labelledby="pills-chiayi-tab"
+                  tabindex="0"
+                >
+                <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-all" />
+                              <label for="changhua-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-1" />
+                              <label for="changhua-public-1">國立成功大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-2" />
+                              <label for="changhua-public-2">國立中正大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-3" />
+                              <label for="changhua-public-3">國立台南大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-4" />
+                              <label for="changhua-public-4"
+                                >國立嘉義大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-5" />
+                              <label for="changhua-public-5"
+                                >國立台南藝術大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-changhua">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-all" />
+                              <label for="changhua-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-chiayi">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-1" />
+                              <label for="changhua-private-1">長榮大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-2" />
+                              <label for="changhua-private-2">南華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-3" />
+                              <label for="changhua-private-3">台灣首府大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-4" />
+                              <label for="changhua-private-4">康寧大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-5" />
+                              <label for="changhua-private-5">中信金融管理學院</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-kg"
+                  role="tabpanel"
+                  aria-labelledby="pills-kg-tab"
+                  tabindex="0"
+                >
+                <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-all" />
+                              <label for="kg-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-1" />
+                              <label for="kg-public-1">國立中山大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-2" />
+                              <label for="kg-public-2">國立高雄師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-3" />
+                              <label for="kg-public-3">國立屏東大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-4" />
+                              <label for="kg-public-4"
+                                >國立高雄大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-5" />
+                              <label for="kg-public-5"
+                                >國立金門大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-kg">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-all" />
+                              <label for="kg-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-kg">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-1" />
+                              <label for="kg-private-1">高雄醫藥大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-2" />
+                              <label for="kg-private-2">義守大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-3" />
+                              <label for="kg-private-3">實踐大學 高雄校區</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--提交跟重設-->
+            <div class="submit-reset">
+              <a class="submit" href="#">提交</a>
+              <a class="reset" href="#">重設</a>
+            </div>
+          </div>
+        </div>
+<div
+          class="tab-pane fade"
+          id="pills-four"
+          role="tabpanel"
+          aria-labelledby="pills-four-tab"
+        >
+           <p class="GSAT">輸入學測成績</p>
+            <form class="score">
+              國文<input type="text" /> 英文<input type="text" /> 數學A<input
+                type="text"
+              />
+              數學B<input type="text" /> 社會<input type="text" /> 自然<input
+                type="text"
+              />
+            </form>
+            <div class="container-pp">
+              <div class="row">
+                <!--英聽-->
+                <div class="col-md-5">
+                  <div class="en-all">
+                    <p class="en">請選擇英聽成績</p>
+                    <div class="score-en">
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-a" name="en-test" />
+                        <label for="en-a">A</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-b" name="en-test" />
+                        <label for="en-b">B</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-c" name="en-test" />
+                        <label for="en-c">C</label>
+                      </div>
+                      <div class="radio-wrapper">
+                        <input type="radio" id="en-F" name="en-test" />
+                        <label for="en-F">F</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="apcs-all">
+                    <p class="apcs">輸入APCS檢測成績(未報考者免填)</p>
+                    <div class="score-APCS">
+                      <p>程式設計觀念題</p>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-1" name="en-APCS" />
+                        <label for="en-1">1</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-2" name="en-APCS" />
+                        <label for="en-2">2</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-3" name="en-APCS" />
+                        <label for="en-3">3</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-4" name="en-APCS" />
+                        <label for="en-4">4</label>
+                      </div>
+                      <div class="radio-strip">
+                        <input type="radio" id="en-5" name="en-APCS" />
+                        <label for="en-5">5</label>
+                      </div>
+                      <p>程式設計實作題</p>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-1" name="en-APCS-2" />
+                        <label for="APCS-1">1</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-2" name="en-APCS-2" />
+                        <label for="APCS-2">2</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-3" name="en-APCS-2" />
+                        <label for="APCS-3">3</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-4" name="en-APCS-2" />
+                        <label for="APCS-4">4</label>
+                      </div>
+                      <div class="radio-strip-2">
+                        <input type="radio" id="APCS-5" name="en-APCS-2" />
+                        <label for="APCS-5">5</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--選擇學群-->
+            <div class="choose-class">
+              <p class="choose">選擇學群</p>
+              <div class="container cc">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="all-choose">
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-all" name="cc" />
+                        <label for="cc-all">全選</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="right-choose">
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-1" />
+                        <label for="cc-1">資訊</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-2" />
+                        <label for="cc-2">工程</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-3" />
+                        <label for="cc-3">數理化</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-4" />
+                        <label for="cc-4">醫療衛生</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-5" />
+                        <label for="cc-5">生命科學</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-6" />
+                        <label for="cc-6">生物資源</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-7" />
+                        <label for="cc-7">地球與環境</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-8" />
+                        <label for="cc-8">建築與設計</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-9" />
+                        <label for="cc-9">藝術</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-10" />
+                        <label for="cc-10">社會與心理</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-11" />
+                        <label for="cc-11">大眾傳播</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-12" />
+                        <label for="cc-12">文史哲</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-13" />
+                        <label for="cc-13">外語</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-14" />
+                        <label for="cc-14">教育</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-15" />
+                        <label for="cc-15">法政</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-16" />
+                        <label for="cc-16">管理</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-17" />
+                        <label for="cc-17">財經</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-18" />
+                        <label for="cc-18">遊憩與運動</label>
+                      </div>
+                      <div class="checkbox-choose">
+                        <input type="checkbox" id="cc-19" />
+                        <label for="cc-19">其他</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--選地區跟學校-->
+            <div class="area-school">
+              <ul
+                class="nav nav-pills-area mb-3"
+                id="pills-tab-area"
+                role="tablist"
+              >
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area active"
+                    id="pills-yilan-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-yilan"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-yilan"
+                    aria-selected="true"
+                  >
+                    宜花東
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-taipei-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-taipei"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-taipei"
+                    aria-selected="false"
+                  >
+                    北北基
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-taoyuan-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-taoyuan"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-taoyuan"
+                    aria-selected="false"
+                  >
+                    桃竹苗
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-changhua-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-changhua"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-changhua"
+                    aria-selected="false"
+                  >
+                    中彰投
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-chiayi-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-chiayi"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-chiayi"
+                    aria-selected="false"
+                  >
+                    雲嘉南
+                  </button>
+                </li>
+                <li class="nav-item-area" role="presentation">
+                  <button
+                    class="nav-link-area"
+                    id="pills-kg-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-kg"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-kg"
+                    aria-selected="false"
+                  >
+                    高屏金門
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-yilan"
+                  role="tabpanel"
+                  aria-labelledby="pills-yilan-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-yilan">
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-all" />
+                            <label for="public-all">公立全選</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-1" />
+                            <label for="public-1">國立宜蘭大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-2" />
+                            <label for="public-2">國立東華大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="public-3" />
+                            <label for="public-3">國立臺東大學</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-yilan">
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-all" />
+                            <label for="private-all">私立全選</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-1" />
+                            <label for="private-1">佛光大學</label>
+                          </div>
+                          <div class="checkbox-area">
+                            <input type="checkbox" id="private-2" />
+                            <label for="private-2">慈濟大學</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-taipei"
+                  role="tabpanel"
+                  aria-labelledby="pills-taipei-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taipei">
+                          <div class="public-all-taipei">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-all" />
+                              <label for="taipei-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-1" />
+                              <label for="taipei-public-1">國立臺灣大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-2" />
+                              <label for="taipei-public-2">國立師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-3" />
+                              <label for="taipei-public-3">國立政治大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-4" />
+                              <label for="taipei-public-4"
+                                >國立陽明交通大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-5" />
+                              <label for="taipei-public-5"
+                                >國立臺北藝術大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-6" />
+                              <label for="taipei-public-6"
+                                >國立臺北教育大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-7" />
+                              <label for="taipei-public-7"
+                                >國立臺北市立大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-8" />
+                              <label for="taipei-public-8"
+                                >國立臺灣藝術大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-9" />
+                              <label for="taipei-public-9">國立臺北大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-public-10" />
+                              <label for="taipei-public-10"
+                                >國立臺灣海洋大學</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-taipei">
+                          <div class="private-all-taipei">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-all" />
+                              <label for="taipei-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-1" />
+                              <label for="taipei-private-1">東吳大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-2" />
+                              <label for="taipei-private-2">淡江大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-3" />
+                              <label for="taipei-private-3">中國文化大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-4" />
+                              <label for="taipei-private-4">大同大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-5" />
+                              <label for="taipei-private-5">輔仁大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-6" />
+                              <label for="taipei-private-6">華梵大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-7" />
+                              <label for="taipei-private-7">銘傳大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-8" />
+                              <label for="taipei-private-8">世新大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-9" />
+                              <label for="taipei-private-9">實踐大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-10" />
+                              <label for="taipei-private-10">真理大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-11" />
+                              <label for="taipei-private-11"
+                                >台北醫學大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-12" />
+                              <label for="taipei-private-12">馬偕醫學院</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taipei-private-13" />
+                              <label for="taipei-private-13"
+                                >台北基督學院</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-taoyuan"
+                  role="tabpanel"
+                  aria-labelledby="pills-taoyuan-tab"
+                  tabindex="0"
+                >
+                  <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-all" />
+                              <label for="taoyuan-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-1" />
+                              <label for="taoyuan-public-1">國立清華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-2" />
+                              <label for="taoyuan-public-2">國立陽明交通大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-3" />
+                              <label for="taoyuan-public-3">國立中央大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-4" />
+                              <label for="taoyuan-public-4"
+                                >國立體育大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-public-5" />
+                              <label for="taoyuan-public-5"
+                                >國立聯合大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-taoyuan">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-all" />
+                              <label for="taoyuan-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-1" />
+                              <label for="taoyuan-private-1">中原大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-2" />
+                              <label for="taoyuan-private-2">長庚大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-3" />
+                              <label for="taoyuan-private-3">中華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-4" />
+                              <label for="taoyuan-private-4">玄奘大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-5" />
+                              <label for="taoyuan-private-5">開南大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="taoyuan-private-6" />
+                              <label for="taoyuan-private-6">銘傳大學</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-changhua"
+                  role="tabpanel"
+                  aria-labelledby="pills-changhua-tab"
+                  tabindex="0"
+                >
+                 <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-all" />
+                              <label for="changhua-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-1" />
+                              <label for="changhua-public-1">國立中興大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-2" />
+                              <label for="changhua-public-2">國立彰化師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-3" />
+                              <label for="changhua-public-3">國立台中教育大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-4" />
+                              <label for="changhua-public-4"
+                                >國立暨南國際大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-5" />
+                              <label for="changhua-public-5"
+                                >國立台灣體育動大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-changhua">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-all" />
+                              <label for="changhua-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-changha">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-1" />
+                              <label for="changhua-private-1">東海大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-2" />
+                              <label for="changhua-private-2">逢甲大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-3" />
+                              <label for="changhua-private-3">靜宜大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-4" />
+                              <label for="changhua-private-4">中國醫藥大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-5" />
+                              <label for="changhua-private-5">大葉大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-6" />
+                              <label for="changhua-private-6">明道大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-7" />
+                              <label for="changhua-private-6">亞洲大學</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-chiayi"
+                  role="tabpanel"
+                  aria-labelledby="pills-chiayi-tab"
+                  tabindex="0"
+                >
+                <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-all" />
+                              <label for="changhua-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-1" />
+                              <label for="changhua-public-1">國立成功大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-2" />
+                              <label for="changhua-public-2">國立中正大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-3" />
+                              <label for="changhua-public-3">國立台南大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-4" />
+                              <label for="changhua-public-4"
+                                >國立嘉義大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-public-5" />
+                              <label for="changhua-public-5"
+                                >國立台南藝術大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-changhua">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-all" />
+                              <label for="changhua-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-chiayi">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-1" />
+                              <label for="changhua-private-1">長榮大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-2" />
+                              <label for="changhua-private-2">南華大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-3" />
+                              <label for="changhua-private-3">台灣首府大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-4" />
+                              <label for="changhua-private-4">康寧大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="changhua-private-5" />
+                              <label for="changhua-private-5">中信金融管理學院</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-kg"
+                  role="tabpanel"
+                  aria-labelledby="pills-kg-tab"
+                  tabindex="0"
+                >
+                <div class="container aa">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="public-taoyuan">
+                          <div class="public-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-all" />
+                              <label for="kg-public-all">公立全選</label>
+                            </div>
+                          </div>
+                          <div class="public-school">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-1" />
+                              <label for="kg-public-1">國立中山大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-2" />
+                              <label for="kg-public-2">國立高雄師範大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-3" />
+                              <label for="kg-public-3">國立屏東大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-4" />
+                              <label for="kg-public-4"
+                                >國立高雄大學</label
+                              >
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-public-5" />
+                              <label for="kg-public-5"
+                                >國立金門大學</label
+                              >
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="private-kg">
+                          <div class="private-all-taoyuan">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-all" />
+                              <label for="kg-private-all">私立全選</label>
+                            </div>
+                          </div>
+                          <div class="private-school-kg">
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-1" />
+                              <label for="kg-private-1">高雄醫藥大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-2" />
+                              <label for="kg-private-2">義守大學</label>
+                            </div>
+                            <div class="checkbox-area">
+                              <input type="checkbox" id="kg-private-3" />
+                              <label for="kg-private-3">實踐大學 高雄校區</label>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--提交跟重設-->
+            <div class="submit-reset">
+              <a class="submit" href="#">提交</a>
+              <a class="reset" href="#">重設</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+        
+
+</div>      
+</div>
+<!-- 底部廣告區 -->
+<div class="bottom-all">
+  <img src="./img/ad.png" alt="" width="100%">
+  <div class="footer">
+      <div class="containter bottom">
+          <div class="row">
+              <div class="col-md-8">
+                  <div class="bottomleft">
+                      <div class="bottomlefttop">
+                          <img src="./img/ad1.png" alt="" >
+                          <img src="./img/ad2.png" alt="" >
+          
+                      </div>
+                      <div class="bottomleftbottom">
+                          <ul>
+                            <div class="threeac">
+                              <li><img src="./img/ad3.png" alt=""></li>
+                              <li><img src="./img/ad4.png" alt=""></li>
+                              <li><img src="./img/ad5.png" alt=""></li>
+                            </div>
+                              <li class="ac-s"><img src="./img/ad6.png" alt=""></li>
+                              <li class="ac-s"><img src="./img/ad7.png" alt=""></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="bottomright">
+                      <img src="./img/ad6.png" alt="" >
+                      <img src="./img/ad7.png" alt=""  >
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="lastbottom">
+          <p>祝您金榜題名（網站名單若有錯誤，以學校榜單為主）</p>
+          <div class="icon">
+            <img src="./img/fb-icon (1).png" alt="">
+            <img src="./img/line-icon.png" alt="">
+          </div>
+        </div>
+  </div>
+
+
+</div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./js/check.js"></script>
+  </body>
+</html>

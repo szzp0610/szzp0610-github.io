@@ -411,18 +411,16 @@ p,a{
         display: none;
     }
     .accordion{
-        display: block;
-        --bs-accordion-border-width: 0px;
+        --bs-accordion-border-width: 0px !important;
         --bs-accordion-btn-color: #7660FD;
         --bs-accordion-active-color: #644BFE;
         --bs-accordion-active-bg: #ffffff;
-        --bs-accordion-btn-focus-border-color: #ffffff;
-        --bs-accordion-btn-focus-border-width: 0px !important;
         --bs-accordion-color: #7660FD;
         --bs-accordion-bg: #fff;
-        --bs-accordion-border-color: #ffffff;
-        --bs-accordion-btn-padding-y: 1.2rem;
         padding: 15px 0;
+    }
+    .accordion-button{
+        padding: 15px 10px 15px 10px;
     }
     .accordion-item{
         display: block;
@@ -438,10 +436,16 @@ p,a{
     .accordion-body {
         padding: 0;
     }
+    .accordion-body ul{
+        padding-left: 1rem;
+    }
+    .accordion-body li{
+        margin-bottom: 15px;
+    }
     .accordion-body a{
         font-size: 14px;
-        font-weight: 500;
-        color: #7660FD;
+        font-weight: 400;
+        color: #656565;
     }
     /*首頁*/
     .first{

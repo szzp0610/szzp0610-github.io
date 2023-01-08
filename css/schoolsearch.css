@@ -472,9 +472,6 @@ text-align: center;
      /*上面導覽*/
      body{
         background-color: #7660FD;
-        background-image: url(../img/backgroundimg.png);
-        background-position:0 760px;
-        vertical-align: middle;
     }
 
     p,a{

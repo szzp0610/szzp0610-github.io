@@ -373,8 +373,10 @@ text-align: center;
 }
 .bottom{
     padding: 0 15%;
-    margin-top: 150px;
+    margin-top: 60px;
+    margin-bottom: 10px;
     width: 100%;
+    text-align: center;
 }
 .bottom img{
     width: 100%;
@@ -404,7 +406,7 @@ text-align: center;
 }
 .bottomright img{
     width: 49%;
-    height: 370px;
+    height: 30vw;
     padding-left: 10px;
     display: inline-block;
 }
@@ -495,18 +497,16 @@ text-align: center;
         display: none;
     }
     .accordion{
-        display: block;
-        --bs-accordion-border-width: 0px;
+        --bs-accordion-border-width: 0px !important;
         --bs-accordion-btn-color: #7660FD;
         --bs-accordion-active-color: #644BFE;
         --bs-accordion-active-bg: #ffffff;
-        --bs-accordion-btn-focus-border-color: #ffffff;
-        --bs-accordion-btn-focus-border-width: 0px !important;
         --bs-accordion-color: #7660FD;
         --bs-accordion-bg: #fff;
-        --bs-accordion-border-color: #ffffff;
-        --bs-accordion-btn-padding-y: 1.2rem;
         padding: 15px 0;
+    }
+    .accordion-button{
+        padding: 15px 10px 15px 10px;
     }
     .accordion-item{
         display: block;
@@ -522,10 +522,16 @@ text-align: center;
     .accordion-body {
         padding: 0;
     }
+    .accordion-body ul{
+        padding-left: 1rem;
+    }
+    .accordion-body li{
+        margin-bottom: 15px;
+    }
     .accordion-body a{
         font-size: 14px;
-        font-weight: 500;
-        color: #7660FD;
+        font-weight: 400;
+        color: #656565;
     }
     /*頁籤連結調整*/
     .firstleft {
@@ -559,21 +565,45 @@ text-align: center;
         border-radius: 0px 0px 50px 50px;
         height: 350px;
         background-color: #ffffff;
+        padding-left: 0;
     }
     .first>.row{
         display: flex;
         flex-direction: column-reverse;
     }
-.firstright{
+    .firstright{
     padding-top: 2%;
     text-align: center;
     margin-bottom: 30px;
-}
-.firstright img{
+    }
+    .firstright img{
     width: 80%;   
     text-align: center;
-}
-.schoolsearch {
+    }
+    /*校系連結調整*/
+    .checkframe {
+        padding: 20% 5% 15% 5%;
+        }
+        .checkframe ul{
+            margin-top: 0;
+        }
+        .mb-3 {
+            padding: 0;
+        }
+        .nav2{
+        font-size: 14px;
+        line-height: 30px;
+        --bs-nav-link-padding-x: 10px;
+        --bs-nav-link-padding-y: 5px;
+    
+        }
+        .text{
+            margin-bottom: 20px;
+        }
+        .text p{
+            font-size: 20px;
+        }
+    .schoolsearch {
     height: 50px;
     width: 85%;
     background: #E8E4FF;
@@ -584,21 +614,61 @@ text-align: center;
     font-weight: 400;
     line-height: 30px;
     color: #656565;
-}
-.searchbutton{
+    }
+    .searchbutton{
     height: 50px;
     background: #7660FD;
     border-radius: 50px;
-}
-.searchbutton p{
+    }
+    .searchbutton p{
     line-height: 50px;
     padding-left: 5px;
     font-size: 14px;
-}
-    /*底部廣告*/
-    .bottom-all{
+    }
+    /*考區*/
+    .checkframe-a {
+    padding: 20px 0;
+    }
+    .checkframe-a>.text-a {
+    line-height: 30px;
+    }
+    .choosearea p {
+        font-size: 12px;
+    }
+    .choosearea {
+        margin-bottom: 10px;
+    }
+    .area {
         width: 100%;
-        margin-top: 50px;
+    }
+    .area li {
+        width: 30%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .area p{
+        font: 12px;
+    }
+    .area-a {
+        margin-bottom: 5px;
+    }
+    .area-a p{
+        font-size: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+    }
+    .area-a a {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+     /*底部廣告*/
+     .bottom-all{
+        width: 100%;
+        margin-top: 250px;
     
     }
     .bottom{
@@ -661,27 +731,4 @@ text-align: center;
     .icon img{
     width: 8%;
       }
-    /*校系連結調整*/
-    .checkframe {
-    padding: 20% 5% 15% 0;
-    }
-    .checkframe ul{
-        margin-top: 0;
-    }
-    .mb-3 {
-        padding: 0;
-    }
-    .nav2{
-    font-size: 14px;
-    line-height: 30px;
-    --bs-nav-link-padding-x: 10px;
-    --bs-nav-link-padding-y: 5px;
-
-    }
-    .text{
-        margin-bottom: 20px;
-    }
-    .text p{
-        font-size: 20px;
-    }
 }

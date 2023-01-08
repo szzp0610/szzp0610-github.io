@@ -18,7 +18,6 @@ p,a{
     margin-top: 150px;
     width: 100%;
 }
-
 /*上面索引*/
 .top{
     width: 100%;
@@ -827,6 +826,46 @@ text-align: center;
         }
         .NTUA p{
             font-size: 12px;
+        }
+            /*考區*/
+    .checkframe-a {
+        padding: 20px 0;
+        }
+        .checkframe-a>.text-a {
+        line-height: 30px;
+        }
+        .choosearea p {
+            font-size: 12px;
+        }
+        .choosearea {
+            margin-bottom: 10px;
+        }
+        .area {
+            width: 100%;
+        }
+        .area li {
+            width: 30%;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .area p{
+            font: 12px;
+        }
+        .area-a {
+            margin-bottom: 5px;
+        }
+        .area-a p{
+            font-size: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+        }
+        .area-a a {
+            font-size: 14px;
+            display: inline-block;
+            vertical-align: middle;
         }
         /*底部廣告*/
         .bottom-all{

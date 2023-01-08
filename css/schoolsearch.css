@@ -152,7 +152,6 @@ p,a{
 .ournav ul{
     padding: 0 10px;
 }
-/*上面索引結束*/
 /*學測查榜查詢頁面*/
 .first{
     padding: 0 4%;
@@ -400,8 +399,10 @@ text-align: center;
 }
 .bottom{
     padding: 0 15%;
-    margin-top: 150px;
+    margin-top: 60px;
+    margin-bottom: 10px;
     width: 100%;
+    text-align: center;
 }
 .bottom img{
     width: 100%;
@@ -431,7 +432,7 @@ text-align: center;
 }
 .bottomright img{
     width: 49%;
-    height: 370px;
+    height: 30vw;
     padding-left: 10px;
     display: inline-block;
 }
@@ -468,7 +469,17 @@ text-align: center;
     p,a{
         font-size: 20px;
     }
-    /*上面導覽*/
+     /*上面導覽*/
+     body{
+        background-color: #7660FD;
+        background-image: url(../img/backgroundimg.png);
+        background-position:0 760px;
+        vertical-align: middle;
+    }
+
+    p,a{
+        font-size: 20px;
+    }
     .question,.find,.canvas,.make{
         position: relative;
         display: none;
@@ -521,18 +532,16 @@ text-align: center;
         display: none;
     }
     .accordion{
-        display: block;
-        --bs-accordion-border-width: 0px;
+        --bs-accordion-border-width: 0px !important;
         --bs-accordion-btn-color: #7660FD;
         --bs-accordion-active-color: #644BFE;
         --bs-accordion-active-bg: #ffffff;
-        --bs-accordion-btn-focus-border-color: #ffffff;
-        --bs-accordion-btn-focus-border-width: 0px !important;
         --bs-accordion-color: #7660FD;
         --bs-accordion-bg: #fff;
-        --bs-accordion-border-color: #ffffff;
-        --bs-accordion-btn-padding-y: 1.2rem;
         padding: 15px 0;
+    }
+    .accordion-button{
+        padding: 15px 10px 15px 10px;
     }
     .accordion-item{
         display: block;
@@ -548,10 +557,16 @@ text-align: center;
     .accordion-body {
         padding: 0;
     }
+    .accordion-body ul{
+        padding-left: 1rem;
+    }
+    .accordion-body li{
+        margin-bottom: 15px;
+    }
     .accordion-body a{
         font-size: 14px;
-        font-weight: 500;
-        color: #7660FD;
+        font-weight: 400;
+        color: #656565;
     }
        /*頁籤連結調整*/
        .firstleft {
@@ -683,6 +698,46 @@ text-align: center;
     .NTUA p{
         font-size: 12px;
     }
+        /*考區*/
+        .checkframe-a {
+            padding: 20px 0;
+            }
+            .checkframe-a>.text-a {
+            line-height: 30px;
+            }
+            .choosearea p {
+                font-size: 12px;
+            }
+            .choosearea {
+                margin-bottom: 10px;
+            }
+            .area {
+                width: 100%;
+            }
+            .area li {
+                width: 30%;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+                margin-bottom: 10px;
+            }
+            .area p{
+                font: 12px;
+            }
+            .area-a {
+                margin-bottom: 5px;
+            }
+            .area-a p{
+                font-size: 10px;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+            }
+            .area-a a {
+                font-size: 14px;
+                display: inline-block;
+                vertical-align: middle;
+            }
 /*底部廣告*/
      .bottom-all{
         width: 100%;

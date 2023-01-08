@@ -275,8 +275,10 @@ p,a{
 }
 .bottom{
     padding: 0 15%;
-    margin-top: 150px;
+    margin-top: 60px;
+    margin-bottom: 10px;
     width: 100%;
+    text-align: center;
 }
 .bottom img{
     width: 100%;
@@ -306,7 +308,7 @@ p,a{
 }
 .bottomright img{
     width: 49%;
-    height: 370px;
+    height: 30vw;
     padding-left: 10px;
     display: inline-block;
 }
@@ -338,17 +340,10 @@ p,a{
 /*手機版*/
 @media(max-width:500px)
 {
-    body{
-        background-color: #7660FD;
-        background-image: url(../img/backgroundimg.png);
-        background-position:0 760px;
-        vertical-align: middle;
-    }
     p,a{
         font-size: 20px;
     }
     /*上面導覽*/
-     /*上面導覽*/
      body{
         background-color: #7660FD;
         background-image: url(../img/backgroundimg.png);
@@ -465,8 +460,8 @@ p,a{
         line-height: 32px;
     }
     .first ul{
-        width: 43vw;
-        height: 43vw;
+        width: 42vw;
+        height: 42vw;
         background: #FFFFFF;
         border: 2px solid #7660FD;
         box-shadow: 8px 12px 17px -6px rgba(62, 57, 115, 0.25);
@@ -492,8 +487,8 @@ p,a{
         flex-direction: row-reverse;
         align-items: center;}
     .first ul:hover{
-        width: 43vw;
-        height: 43vw;
+        width: 42vw;
+        height: 42vw;
         background: #FFFFFF;
         border: 2px solid #7660FD;
         box-shadow: 8px 12px 17px -6px rgba(62, 57, 115, 0.25);

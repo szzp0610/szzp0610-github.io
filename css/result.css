@@ -83,6 +83,9 @@ a {
 .tr2{
   transform: rotate(90deg);
 }
+.nav-item-t{
+  display: block;
+}
 .nav-item-t a,.back a,.number p{
   text-decoration: none;
   font-family: 'Khula';
@@ -112,13 +115,16 @@ a {
   flex-basis: auto;
   flex-direction: row-reverse;
 }
+.accordion-item{
+  display: none;
+}
 /*索引漢堡*/
 .navbar-toggler-icon {
   display: inline-block;
-  width: 5vw;
-  height: 3vh;
+  width: 3vw;
+  height: 5vw;
   vertical-align: middle;
-  background-image: url(../img/navbar\ icon.png);
+  background-image: url(../img/navbaricon.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 90%;
@@ -158,6 +164,7 @@ a {
 .ournav ul{
   padding: 0 10px;
 }
+/*上面索引結束*/
 /*上面區塊*/
 .left-world P {
   color: #ffffff;
@@ -165,6 +172,7 @@ a {
   display: inline-block;
   font-weight: bold;
   letter-spacing: 2px;
+  line-height: 30px;
 }
 .left-world h1 {
   color: #ffffff;
@@ -176,18 +184,19 @@ a {
 }
 .left-world {
   line-height: 50px;
-  padding: 0 0 100px 0;
+  padding: 50px;
 }
 
 .left-world-score {
   background-color: #644bfe;
   border-radius: 50px;
   letter-spacing: 3px;
-  width: 55%;
+  width: 75%;
   padding: 0% 1% 0% 2%;
 }
 .tt {
-  padding: 6% 0 0 0;
+    padding: 6% 6% 0 6%;
+    margin: 0;
 }
 .left-img {
   padding-top: 10%;
@@ -212,10 +221,18 @@ a {
   --bs-nav-link-disabled-color: #7660fd;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 5%;
-  margin-bottom: 0;
   list-style: none;
+  background-color: #ffffff;
+  border-radius: 50px 50px 0 0;
+  justify-content: space-evenly;
 }
+.mb-3 {
+  margin-bottom: 0rem !important;
+}
+.phone {
+  display: inline;
+}
+
 .nav-link {
   display: block;
   padding: 52px;
@@ -226,12 +243,9 @@ a {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
 }
-.nav-item-r {
-  width: 33%;
-}
 .result {
   background-color: #ffffff;
-  border-radius: 50px;
+  border-radius: 0 0 50px 50px;
   padding: 0 0 0 6%;
 }
 .all {
@@ -302,7 +316,7 @@ p {
 /*底部廣告區*/
 .bottom-all{
   width: 100%;
-  margin-top: 0px;
+  margin-top: 50px;
 
 }
 .bottom-all>img {
@@ -316,7 +330,10 @@ p {
 }
 .bottom{
   padding: 0 15%;
+  margin-top: 60px;
+  margin-bottom: 10px;
   width: 100%;
+  text-align: center;
 }
 .bottom img{
   width: 100%;
@@ -346,7 +363,7 @@ p {
 }
 .bottomright img{
   width: 49%;
-  height: 370px;
+  height: 30vw;
   padding-left: 10px;
   display: inline-block;
 }
@@ -374,4 +391,321 @@ p {
 .icon img{
   text-align: center;
   width: 4%;
+}
+/*手機板*/
+@media (max-width: 500px) {
+  body {
+    background-position: 0 50px;
+    background-color: #7660fd;
+    vertical-align: middle;
+    background-size: 500px;
+  }
+p,a{
+    font-size: 20px;
+}
+  /*上面導覽*/
+  .question,.find,.canvas,.make{
+    position: relative;
+    display: none;
+}
+.topleft, .number, .back {
+    display: inline-block;
+    vertical-align: middle;
+}
+.navbar{
+    background-color: #ffffff;
+    --bs-navbar-color: #7660FD;
+    --bs-navbar-hover-color: #AC9DEF;
+    --bs-navbar-disabled-color: #7660FD;
+    --bs-navbar-active-color: #7660FD;
+    padding: 8px 0 12px 0;
+}
+.navbar-brand {
+    margin-right: 0;
+}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: inline-block;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-item-t a{
+    color: #7660FD;
+    font-size: 14px;
+}
+.number p{
+    color: #7660FD;
+}
+.navbar-toggler {
+    float: right;
+}
+.back a{
+    color: #7660FD;
+}
+.container-fluid{
+    padding-left: 0;
+    padding-right: 3%;
+}
+.topleft a,.topleft p{
+    font-size: 14px;
+}
+.tr1,.tr2{
+    border-width: 0 6px 7px;
+}
+.nav-item-t{
+    display: none;
+}
+.accordion{
+    --bs-accordion-border-width: 0px !important;
+    --bs-accordion-btn-color: #7660FD;
+    --bs-accordion-active-color: #644BFE;
+    --bs-accordion-active-bg: #ffffff;
+    --bs-accordion-color: #7660FD;
+    --bs-accordion-bg: #fff;
+    padding: 15px 0;
+}
+.accordion-button{
+    padding: 15px 10px 15px 10px;
+}
+.accordion-item{
+    display: block;
+}
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+    border-radius: 0;
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+}
+.accordion-body {
+    padding: 0;
+}
+.accordion-body ul{
+    padding-left: 1rem;
+}
+.accordion-body li{
+    margin-bottom: 15px;
+}
+.accordion-body a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #656565;
+}
+  /*上面圖案區*/
+  .tt {
+    padding: 100px 0 0 0;
+  }
+  .tt .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .left-world h1 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Khula";
+    letter-spacing: 5px;
+    padding: 0;
+  }
+  .left-world-score {
+    background-color: #644bfe;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    width: 100%;
+    padding: 0% 1% 0% 5%;
+  }
+  .left-world P {
+    color: #ffffff;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .left-world-score-110-109 p {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .left-world {
+    line-height: 50px;
+    padding: 40px 35px 0px 35px;
+  }
+  .left-img {
+    padding-left: 30%;
+    padding-top: 0;
+  }
+  .left-img img {
+    vertical-align: none;
+    width: 234px;
+    height: 255px;
+  }
+  /*頁籤按鈕*/
+  .nav {
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-color: #7660fd;
+    --bs-nav-link-hover-color: #7660fd;
+    --bs-nav-link-disabled-color: #7660fd;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: #7660fd;
+    border-radius: 50px 50px 0 0;
+    justify-content: space-evenly;
+  }
+  .nav-link {
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    border-bottom: 2px solid rgb(118, 96, 253);
+    border-radius: 100px;
+  }
+  .nav-pills .nav-link {
+    background: 0 0;
+    background-color: #ffffff;
+    border-radius: 100px;
+  }
+  /*頁籤內容*/
+  .result {
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .pirple-number {
+    color: #7660fd;
+    font-size: 14px;
+    display: block;
+    width: 10%;
+  }
+  .one-result {
+    display: flex;
+    flex-direction: row;
+    padding: 4%;
+  }
+  .one-result-last {
+    display: flex;
+    flex-direction: row;
+    padding: 4%;
+  }
+  .phone {
+    display: flex;
+    flex-direction: column;
+  }
+  .school {
+    width: 100%;
+    text-align: left;
+  }
+  .department {
+    display: inline-block;
+    width: 150%;
+    text-align: left;
+  }
+  .star img,
+  svg {
+    vertical-align: middle;
+    width: 70px;
+    height: 10px;
+  }
+  .star {
+    display: inline-block;
+    background-color: #7660fd;
+    border-radius: 50px;
+    padding: 10px 5%;
+    height: 50%;
+  }
+  .purple {
+    font-size: 14px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .purple-s {
+    font-size: 14px;
+  }
+  .news {
+    border-radius: 50px;
+    width: 100%;
+    padding: 5px 1% 5px 10%;
+    margin-top: 10px;
+  }
+  .news a {
+    color: #ffffff;
+    display: inline-block;
+    /* padding: 3%; */
+    font-size: 12px;
+  }
+       /*底部廣告*/
+       .bottom-all{
+        width: 100%;
+        margin-top: 50px;
+    
+    }
+    .bottom{
+        padding: 0 8%;
+        margin-top: 50px;
+    }
+    .bottom img{
+        width: 100%;
+        border-radius: 25px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .bottomleft {
+        padding: 0 1%;
+        padding-top: 5%;
+    }
+    .bottomleft ul{
+        display:flex;
+        padding: 0;
+    }
+    .bottomleft li {
+        width: 30%;
+        display: flex;
+        text-align: left;
+        margin-right: 2%;
+    }
+    .threeac{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+    .threeac li{
+        width: 80%;
+    }
+    .ac-s{
+        display: flex !important;
+        width: 65%;
+    }
+    .bottomright{
+        display: inline-block;
+    }
+    .bottomright img{
+        display: none;
+    }
+    /*金榜題名標題*/
+   .lastbottom{
+    padding: 0 5%;
+    margin-top: 2px;
+     }
+   .lastbottom p{
+    font-size: 12px;
+    line-height: 39px;
+    padding-top: 2px;
+    border-top:  0.5px solid #FFFFFF;
+     }
+    .icon{
+    width: 100%;
+    margin: 2px 2px 25px 2px;
+     }
+    .icon img{
+    width: 8%;
+      }
 }
